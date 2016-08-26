@@ -103,31 +103,3 @@ a {
 
 em, i {
   font-style: normal; }
-
-.hide {
-  display: none !important; }
-
-.hide2 {
-  opacity: 0 !important; }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none !important;
-    opacity: 0;
-}
-.wrap{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-width: 320px;
-  max-width: 750px;
-  min-height: 100%;
-  margin: 0 auto;
-}
-
-.head{
-  width:100%;
-  height:toRem(70px);
-  margin-bottom: toRem(20px);
-  border-bottom:1px solid rgba(155,155,155,.5);
-}
