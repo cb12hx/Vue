@@ -1,6 +1,7 @@
 <template>
-  <div class="page">     
-      <bar>      
+  <div class="page">  
+
+      <bar index=1>      
       </bar>
       <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
   </div>
@@ -14,6 +15,14 @@ export default {
   components: {
     Bar,
     Index
+  },
+  data:function(){
+    return {
+      path:this.$route.path
+    }
+  },
+  ready:function(){
+    console.log(this.path)
   }
 }
 </script>

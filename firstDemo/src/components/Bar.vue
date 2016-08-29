@@ -8,6 +8,9 @@
 </template>
 <script>
 export default {
+   props: {
+    index:0
+   },
   data () {
     return {
       barList:[{
@@ -26,8 +29,12 @@ export default {
         className:'setting',
         path:'setting',
         name:'设置'
-      }]
+      }],
+      currentPath:this.$route.path
     }
+  },
+  ready:function(){
+      console.log(this.index)
   }
 }
 </script>
