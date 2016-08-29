@@ -1,8 +1,6 @@
 <template>
-  <div class="page">
-     
-      <bar>
-      
+  <div class="page">     
+      <bar>      
       </bar>
       <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
   </div>
@@ -19,4 +17,11 @@ export default {
   }
 }
 </script>
-
+<style>  
+.fade-transition {
+  transition: opacity .1s ease;
+}
+.fade-enter, .fade-leave {
+  opacity: 0;
+}
+</style>

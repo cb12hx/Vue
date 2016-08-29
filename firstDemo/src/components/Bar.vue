@@ -39,9 +39,11 @@ export default {
   position: fixed;
   bottom: 0px;
   left: 0px;
+  z-index: 1;
   width:100%;
   height: toRem(100px);
-  background: #f0f0f0;
+  background: #ddd;
+  border-top: 1px solid rgba(174,174,174,.5);
   li{
     float: left;
     width:25%;

@@ -1,76 +1,62 @@
 <template>
-      <swiper></swiper>
-  <div class="speaker">
+  <nav class="index">
+    <swiper></swiper>
+    <div class="speaker">
+        <ul>
+          <li>华东地区的冠军是擦神，但是他是一个不能fifa的玩家</li>
+        </ul>
+    </div>
+    <div class="itemList">
       <ul>
-        <li>华东地区的冠军是擦神，但是他是一个不能fifa的玩家</li>
+        <li v-for="item in subItem">
+          <img :src=`/static/images/index/${item.img}.png` />
+          <p v-text="item.title"></p>
+        </li>
       </ul>
+    </div>
+  <div class="infoList">
+
+    <li v-for="item in dataList">
+      <img :src="item.img" />
+      <div >
+        <p v-text="item. title"><p>
+        <section v-text="item.des"></section>
+      </div>
+    </li>
+     
   </div>
-  <div class="itemList">
-    <ul>
-      <li>
-        <img src="../assets/images/world_football.png" />
-        <p>天下足球</p>
-      </li>
-   
-     <li>
-        <img src="../assets/images/fifa.png" />
-        <p>FIFA动态</p>
-      </li>
-      <li>
-        <img src="../assets/images/world_cup.png" />
-        <p>我爱世界杯</p>
-      </li>
-         <li>
-        <img src="../assets/images/history.png" />
-        <p>历史今天看</p>
-      </li>
-    </ul>
-  </div>
-<div class="infoList">
-  <li>
-    <img src='../assets/images/barcelona.jpg' />
-    <div >
-      <p>巴萨大将：队友实在太强了 我闭着眼睛都能踢球<p>
-      <section>作为巴萨在这个夏天最昂贵的引援，安德烈-戈麦斯无疑会成为新赛季巴萨球迷关注的焦点，这对许多球员来说，无形中也是一种压力。而安德烈-戈麦斯在接受采访时却表示，在巴萨踢球是自己最好的选择，因为队友都太强了，自己闭着眼睛都能踢好球。</section>
-    </div>
-  </li>
-    <li>
-    <img src='../assets/images/hart.jpg' />
-    <div >
-      <p>英超失宠11球星:瓜帅弃哈特 穆帅铁腕下放小猪<p>
-      <section>英超联赛已经揭幕，但转会窗口还没有关闭。对于一些球员来说，恐怕在接下来几天就会离开球队，由于失去了主教练和俱乐部的信任和关注，他们被逼到了球队边缘。</section>
-    </div>
-  </li>
-    <li>
-    <img src='../assets/images/barcelona.jpg' />
-    <div >
-      <p>英超失宠11球星:瓜帅弃哈特 穆帅铁腕下放小猪<p>
-      <section>英超联赛已经揭幕，但转会窗口还没有关闭。对于一些球员来说，恐怕在接下来几天就会离开球队，由于失去了主教练和俱乐部的信任和关注，他们被逼到了球队边缘。</section>
-    </div>
-  </li>
-    <li>
-    <img src='../assets/images/barcelona.jpg' />
-    <div >
-      <p>英超失宠11球星:瓜帅弃哈特 穆帅铁腕下放小猪<p>
-      <section>英超联赛已经揭幕，但转会窗口还没有关闭。对于一些球员来说，恐怕在接下来几天就会离开球队，由于失去了主教练和俱乐部的信任和关注，他们被逼到了球队边缘。</section>
-    </div>
-  </li>
-    <li>
-    <img src='../assets/images/barcelona.jpg' />
-    <div >
-      <p>英超失宠11球星:瓜帅弃哈特 穆帅铁腕下放小猪<p>
-      <section>英超联赛已经揭幕，但转会窗口还没有关闭。对于一些球员来说，恐怕在接下来几天就会离开球队，由于失去了主教练和俱乐部的信任和关注，他们被逼到了球队边缘。</section>
-    </div>
-  </li>
-</div>
+</nav>
 </template>
 
 <script>
-
+import initialData from '../assets/data/initialData';
 import Swiper from './Swiper'
 export default { 
   components: {
     Swiper
+  },
+  data(){
+    return{
+      dataList:initialData.index_List,
+      subItem:[
+        {
+          img:'world_football',
+          title:'天下足球'
+        },
+        {
+          img:'fifa',
+          title:'FIFA动态'
+        },
+        {
+          img:'world_cup',
+          title:'我爱世界杯'
+        },
+        {
+          img:'history',
+          title:'历史今天看'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -78,6 +64,9 @@ export default {
 @function toRem($px) {
    @return $px / 37.5px * 1rem;
 }
+.index{
+  background: #fff;
+
   .speaker{
     width:100%;
     height: toRem(60px);
@@ -162,6 +151,6 @@ export default {
       };
     }
   }
-  
+}
 </style>
 
