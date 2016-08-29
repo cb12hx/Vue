@@ -4,7 +4,7 @@
           <img :src=`/static/images/setting/${myInfo.img}.jpg` />
           <div class="other">
             <p class="name" v-text="myInfo.name"></p>
-            <p class="nickName" v-text="myInfo.nickName"></p>
+            <p class="nickName" v-text="myInfo.des"></p>
           </div>
       </section>
       <section class="list">
@@ -26,7 +26,7 @@ export default {
       myInfo:{
         name:'陈斌',
         img:'head',
-        nickName:'cb12hx'
+        des:'专注fifa好多年'
       },
       dataList:[{
         img:'hp_personal_storage_box',

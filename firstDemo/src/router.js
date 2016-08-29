@@ -6,6 +6,9 @@ import Login from './components/Login'
 import Register from './components/Register'
 export default function (router) {
   router.map({
+    '*': {
+       component: Index
+    },
     '/index': {
        component: Index
     },
