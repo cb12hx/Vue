@@ -5,13 +5,14 @@ import Setting from './components/Setting'
 import Login from './components/Login'
 import Register from './components/Register'
 import Loading from './components/Loading'
+import VuexTest from './components/VuexTest'
 export default function (router) {
   router.map({
     '*': {
-       component: Loading
+      component: Loading
     },
     '/index': {
-       component: Index
+      component: Index
     },
     '/nation': {
       component: Nation
@@ -22,19 +23,16 @@ export default function (router) {
     '/setting': {
       component: Setting
     },
-    '/login': {
-      component (resolve) {
-        require(['./components/Login'], resolve)
-      }
-    }
-    ,
-     '/register': {
+    '/vuexTest': {
+      component: VuexTest
+    },
+    '/register': {
       component: Register
     }
   })
   router.afterEach(function ({to}) {
     console.log(`成功浏览到: ${to.path}`)
-    
+
   })
 
 }

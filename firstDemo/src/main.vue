@@ -11,6 +11,7 @@
 import adapt from './assets/js/adapt'
 import Index from './components/Index'
 import Bar from './components/Bar'
+import store from './vuex/store' // import 我们刚刚创建的 store
 export default { 
   components: {
     Bar,
@@ -23,7 +24,8 @@ export default {
   },
   ready:function(){
     console.log(this.path)
-  }
+  },
+  store
 }
 </script>
 <style>  
