@@ -1,16 +1,21 @@
 <template>
   <ul class="bar-list">
     <li  v-for="item in barList" :class="item.className">
-      <a v-link="{path:item.path}" v-text="item.name"></a>
+      <a v-link="{name:item.path,activeClass:'active'}" v-text="item.name"></a>
     </li>
    
   </ul>
 </template>
 <script>
-export default {
-   props: {
-    index:0
-   },
+export default {  
+  route:{
+    data({ to: { params: { tab = 'all', page = 1 } } }){
+      console.log(123)
+    },
+    activate(transition){
+      console.log('ccccc,',transition)
+    }
+  } ,
   data () {
     return {
       barList:[{
@@ -29,12 +34,8 @@ export default {
         className:'setting',
         path:'setting',
         name:'设置'
-      }],
-      currentPath:this.$route.path
+      }]
     }
-  },
-  ready:function(){
-      console.log(this.index)
   }
 }
 </script>
@@ -47,7 +48,7 @@ export default {
   bottom: 0px;
   left: 0px;
   z-index: 1;
-  width:100%;
+  width:toRem(750px);
   height: toRem(100px);
   background: #ddd;
   border-top: 1px solid rgba(174,174,174,.5);
@@ -62,6 +63,9 @@ export default {
     a{
       color:#444;
     }
+   .active{
+     color:red;
+   }
   }  
   .index{
     background: no-repeat center toRem(10px) url(../assets/images/index.png);

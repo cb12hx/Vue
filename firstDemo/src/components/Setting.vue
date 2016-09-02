@@ -56,7 +56,7 @@ export default {
   }
   .myInfo{
      
-      width:100%;
+      width:toRem(750px);
       min-height: 100%;
       color:#444;
       .baseInfo{

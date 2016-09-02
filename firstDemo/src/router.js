@@ -11,16 +11,22 @@ export default function (router) {
     '*': {
       component: Loading
     },
-    '/index': {
-      component: Index
+    
+    '/index': {      
+      name: 'index',
+      component: Index,
+      hashbang:false
     },
     '/nation': {
+      name: 'nation',
       component: Nation
     },
     '/community': {
+      name: 'community',
       component: Community
     },
     '/setting': {
+      name: 'setting',
       component: Setting
     },
     '/vuexTest': {

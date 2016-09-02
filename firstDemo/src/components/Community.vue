@@ -38,6 +38,7 @@ export default {
   }
   .community{
      padding-bottom: toRem(120px);
+      width:toRem(750px);
     li{
       position: relative;
       width:toRem(710px);      

@@ -1,7 +1,6 @@
 <template>
   <div class="page">  
-
-      <bar index=1>      
+      <bar :barlist=barList>      
       </bar>
       <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
   </div>
@@ -19,11 +18,26 @@ export default {
   },
   data:function(){
     return {
-      path:this.$route.path
+      barList:[{
+        className:'index',
+        path:'index',
+        name:'首页'
+      },{
+        className:'address',
+        path:'nation',
+        name:'国家队'
+      },{
+        className:'community',
+        path:'community',
+        name:'社区'
+      },{
+        className:'setting',
+        path:'setting',
+        name:'设置'
+      }]
     }
   },
   ready:function(){
-    console.log(this.path)
   },
   store
 }

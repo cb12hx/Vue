@@ -66,7 +66,7 @@ export default {
 }
 .index{
   background: #fff;
-
+  width:toRem(750px);
   .speaker{
     width:100%;
     height: toRem(60px);
