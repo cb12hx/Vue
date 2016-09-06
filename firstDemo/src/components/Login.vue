@@ -1,17 +1,6 @@
-
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <table class="test">
-      <tr>
-        <td>用户名:</td>
-        <td><input  :placeholder="nameTip" /></td>
-      </tr>
-      <tr>
-        <td>密码:</td>
-        <td><input  :placeholder="pwdTip" /></td>
-      </tr>
-    </table>
+  <div class="login">
+      <div class="form"></div>
   </div>
 </template>
 
@@ -28,5 +17,22 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  @function toRem($px) {
+    @return $px / 37.5px * 1rem;
+  }
+  
+  .login {
+    width:100%;
+    height:100%;  
+    background:#fff;
+    overflow:hidden;
+    .form {
+      width: toRem(750px);
+      height:100%;
 
-
+      background: no-repeat left top url(../assets/images/bg.png) ;
+      background-size: 100% auto;
+    }
+  }
+</style>

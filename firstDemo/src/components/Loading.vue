@@ -9,7 +9,7 @@
 export default {
   ready () {
     setTimeout(() => {
-      this.$route.router.go({path: '/index', replace: true})
+      this.$route.router.go({path: '/main/index', replace: true})
     }, 1200)
   }
 }
