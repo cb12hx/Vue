@@ -8,7 +8,7 @@
 
 <script>
 import adapt from './assets/js/adapt'
-import Index from './components/Index'
+import Index from './components/Indexbak'
 import Bar from './components/Bar'
 import store from './vuex/store' // import 我们刚刚创建的 store
 export default { 

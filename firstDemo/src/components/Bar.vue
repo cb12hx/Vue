@@ -20,19 +20,19 @@ export default {
     return {
       barList:[{
         className:'index',
-        path:'index',
+        path:'/main/index',
         name:'首页'
       },{
         className:'address',
-        path:'nation',
+        path:'/main/nation',
         name:'国家队'
       },{
         className:'community',
-        path:'community',
+        path:'/main/community',
         name:'社区'
       },{
         className:'setting',
-        path:'setting',
+        path:'/main/setting',
         name:'设置'
       }]
     }
